@@ -150,7 +150,7 @@ def parse_record_next(i,token):
     print('第'+str(m)+'页已爬取完毕...\n 开始爬取下一偏移量的100条数据...')
 
 def toMongoDB(result):
-    client = pymongo.MongoClient(host='localhost',port=27017)
+    client = pymongo.MongoClient(host='localhost',port=port)
     db = client['cgris']
     cgris = db['first']
     cgris.insert(result)
